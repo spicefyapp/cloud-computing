@@ -7,6 +7,9 @@ const port = process.env.PORT || 3000;
 // Middleware to parse JSON requests
 app.use(express.json());
 
+// Middleware to parse x-www-form-urlencoded data
+app.use(express.urlencoded({ extended: true }));
+
 app.get('/', (req, res) => {
     res.send('Hello World!');
 });
