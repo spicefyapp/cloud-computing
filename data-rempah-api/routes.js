@@ -10,7 +10,7 @@ routes.post(
     [
         body("name", "Must not be empty.").trim().not().isEmpty().escape(),
         body("description", "Must not be empty.").trim().not().isEmpty().escape(),
-        body("image", "Must not be empty.").trim().not().isEmpty().escape(),
+        body("image", "Must not be empty.").trim().not().isEmpty().isURL(),
     ],
     Controller.validation,
     Controller.addr
