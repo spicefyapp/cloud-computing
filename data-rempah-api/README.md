@@ -2,8 +2,8 @@
 API ini adalah API CRUD buat database rempah aplikasi Spicify.
 
 ## Step by step pakai API ini
-1. Clone repository ini, ketik `git clone https://github.com/spicefyapp/cloud-computing.git data-rempah-api` di terminal (command prompt).
-2. Masuk ke folder dengan perintah `cd data-rempah-api` di terminal (command prompt).
+1. Clone repository ini, ketik `git clone https://github.com/spicefyapp/cloud-computing.git spicefy-api` di terminal (command prompt).
+2. Masuk ke folder dengan perintah `cd spicefy-api/data-rempah-api` di terminal (command prompt).
 3. Download file [.env](https://drive.google.com/file/d/1J0XuOYQBCiDK0NN1XhwNWN0iDdGDMrsy/view?usp=sharing) dan simpan di folder yang sama dengan API ini. Mohon dijaga kerahasiaan file ini soalnya ada konten instance cloud.
 4. Run kode `npm init -y` di terminal.
 5. Jalankan API pake perintah `node index.js`.
