@@ -47,7 +47,7 @@ routes.put(
             .trim()
             .not()
             .isEmpty()
-            .escape(),
+            .isURL(),
     ],
     Controller.validation,
     Controller.editr
