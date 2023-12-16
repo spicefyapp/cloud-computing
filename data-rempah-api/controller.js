@@ -81,8 +81,8 @@ class Controller {
             const description = data.description || spice.description;
             const image = data.image || spice.image;
             await DB.execute(
-                "UPDATE `rempah` SET `name`=?, `description`=?,`image`=?, `updated_at`=? WHERE `id`=?",
-                [name, description, image, date, data.id]
+                "UPDATE `rempah` SET `name`=?, `description`=?,`image`=? WHERE `id`=?",
+                [name, description, image, data.id]
             );
             res.json({
                 ok: 1,
