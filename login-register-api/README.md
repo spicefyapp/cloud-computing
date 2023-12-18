@@ -14,6 +14,6 @@ API ini adalah API login & register user di aplikasi Spicify.
 * Kalo dapet error "ps1 cannot be loaded because running scripts is disabled on this system", [baca ini](https://stackoverflow.com/questions/41117421/ps1-cannot-be-loaded-because-running-scripts-is-disabled-on-this-system).
 
 ## Endpoints
-* **/api/signup** = (POST) buat daftar. ini nerima 3 data, yaitu : name, email, password.
-* **/api/login** = (POST) buat login. nerima 2 data, yaitu: email dan password. 
-* **/api/profile & /api/refresh** = kemungkinan jarang ke pake, tapi itu buat get profil sama refresh token
+* **/user/signup** = (POST) buat daftar. ini nerima 3 data, yaitu : name, email, password.
+* **/user/login** = (POST) buat login. nerima 2 data, yaitu: email dan password. 
+* **/user/profile & /user/refresh** = kemungkinan jarang ke pake, tapi itu buat get profil sama refresh token
