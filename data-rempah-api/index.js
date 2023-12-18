@@ -5,7 +5,7 @@ const app = express();
 const PORT = 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(routes);
+app.use('/rempah', routes);
 
 // Error Handling
 app.use((err, req, res, next) => {
