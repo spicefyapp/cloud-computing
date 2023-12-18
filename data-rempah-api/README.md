@@ -14,8 +14,8 @@ API ini adalah API CRUD buat database rempah aplikasi Spicify.
 * Kalo dapet error "ps1 cannot be loaded because running scripts is disabled on this system", [baca ini](https://stackoverflow.com/questions/41117421/ps1-cannot-be-loaded-because-running-scripts-is-disabled-on-this-system).
 
 ## Endpoints
-* **/add** = buat nambahin data. API ini nerima 3 data, yaitu : name, description, image. Untuk 'image' itu pakai link GDrive buat sementara
-* **/show** = buat nampilin semua data
-* **/spice/[id]** = nampilin salah satu data berdasarkan id nya, buat sekarang (16/12/2023) datanya ada 25
-* **/edit** = ngubah data, ditrigger pake id. List id dan rempahnya ada [di sini](https://drive.google.com/file/d/1Lx8b_gZCQFGRmpRbNQve__7s8G0xILWl/view?usp=sharing). Tapi itu gaada id nya, jadi itung sendiri ya :v
-* **/delete** = menghapus data, tinggal pake id doang.
+* **/rempah/add** = buat nambahin data. API ini nerima 3 data, yaitu : name, description, image. Untuk 'image' itu pakai link GDrive buat sementara
+* **/rempah/show** = buat nampilin semua data
+* **/rempah/spice/[id]** = nampilin salah satu data berdasarkan id nya, buat sekarang (16/12/2023) datanya ada 25
+* **/rempah/edit** = ngubah data, ditrigger pake id. List id dan rempahnya ada [di sini](https://drive.google.com/file/d/1Lx8b_gZCQFGRmpRbNQve__7s8G0xILWl/view?usp=sharing). Tapi itu gaada id nya, jadi itung sendiri ya :v
+* **/rempah/delete** = menghapus data, tinggal pake id doang.
