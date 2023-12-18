@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
     res.send('Hello World!');
 });
-app.use('/api', routes);
+app.use('/user', routes);
 app.use((err, req, res, next) => {
     err.statusCode = err.statusCode || 500;
     err.message = err.message || 'Internal Server Error';
