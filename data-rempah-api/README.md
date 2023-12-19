@@ -16,6 +16,7 @@ API ini adalah API CRUD buat database rempah aplikasi Spicify.
 ## Endpoints
 * **/rempah/add** = (POST) buat nambahin data. API ini nerima 3 data, yaitu : name, description, image. Untuk 'image' itu pakai link GDrive buat sementara
 * **/rempah/show** = (GET) buat nampilin semua data
-* **/rempah/spice/[id]** = (GET) nampilin salah satu data berdasarkan id nya, buat sekarang (16/12/2023) datanya ada 25
+* **/rempah/spiceID/[id]** = (GET) nampilin salah satu data berdasarkan id nya, buat sekarang (16/12/2023) datanya ada 25
+* **/rempah/spiceName/[name]** = (GET) nampilin salah satu data berdasarkan nama nya
 * **/rempah/edit** = (PUT) ngubah data, ditrigger pake id. List id dan rempahnya ada [di sini](https://drive.google.com/file/d/1Lx8b_gZCQFGRmpRbNQve__7s8G0xILWl/view?usp=sharing). Tapi itu gaada id nya, jadi itung sendiri ya :v
 * **/rempah/delete** = (DELETE) menghapus data, tinggal pake id doang.
