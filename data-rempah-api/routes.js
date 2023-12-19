@@ -19,8 +19,14 @@ routes.post(
 // Read Data
 routes.get("/show", Controller.showr);
 routes.get(
-    "/spice/:id",
+    "/spiceID/:id",
     [param("id", "Invalid ID.").exists().isNumeric().toInt()],
+    Controller.validation,
+    Controller.showr
+);
+routes.get(
+    "/spiceName/:name",
+    [param("name", "Invalid name.").exists().isString().trim()],
     Controller.validation,
     Controller.showr
 );
