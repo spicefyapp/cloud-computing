@@ -36,18 +36,21 @@ class Controller {
         }
     };
 
-    static showr = async (req, res, next) => {
+     static showr = async (req, res, next) => {
         try {
             let sql = "SELECT * FROM `rempah`";
             if (req.params.id) {
                 sql = `SELECT * FROM rempah WHERE id=${req.params.id}`;
+            } else if (req.params.name) {
+                const partialName = `%${req.params.name}%`;
+                sql = `SELECT * FROM rempah WHERE name LIKE '${partialName}'`;
             }
             const [row] = await DB.query(sql);
-            if (row.length === 0 && req.params.id) {
+            if (row.length === 0 && (req.params.id || req.params.name)) {
                 return res.status(404).json({
                     ok: 0,
                     status: 404,
-                    message: "Invalid ID.",
+                    message: req.params.id ? "Invalid ID." : "No matching name found.",
                 });
             }
             const spice = req.params.id ? { spice: row[0] } : { rempah: row };
