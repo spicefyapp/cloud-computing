@@ -1,11 +1,23 @@
 import express from "express";
-import routes from "./routes.js";
-
+import rempah from "./routesRempah.js";
+import market from "./routesMarket.js";
 const app = express();
-const PORT = 3000;
+const port = process.env.PORT || 3002;
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use('/rempah', routes);
+app.use('/rempah', rempah);
+app.use('/market', market);
+
+app.get('/', (req, res) => {
+    res.send('API MAIN Rempah is working!');
+});
+app.get('/rempah', (req, res) => {
+    res.send('API Data Rempah is working!');
+});
+app.get('/market', (req, res) => {
+    res.send('API Market Rempah is working!');
+});
 
 // Error Handling
 app.use((err, req, res, next) => {
@@ -16,4 +28,4 @@ app.use((err, req, res, next) => {
     });
 });
 
-app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+app.listen(port, () => console.log(`Server is running on port ${port}`));
