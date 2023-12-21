@@ -36,7 +36,7 @@ class Controller {
         }
     };
 
-     static showr = async (req, res, next) => {
+    static showr = async (req, res, next) => {
         try {
             let sql = "SELECT * FROM `rempah`";
             if (req.params.id) {
