@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { body, param } from "express-validator";
-import Controller from "./controller.js";
+import Controller from "./controllerRempah.js";
 
 const routes = Router({ strict: true });
 
