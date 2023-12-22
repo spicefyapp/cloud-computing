@@ -1,13 +1,14 @@
 import express from "express";
 import rempah from "./routesRempah.js";
 import market from "./routesMarket.js";
+import { upload } from './csConnection.js';
 const app = express();
 const port = process.env.PORT || 3002;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use('/rempah', rempah);
-app.use('/market', market);
+app.use('/rempah', upload.single('image'), rempah);
+app.use('/market', upload.single('image'), market);
 
 app.get('/', (req, res) => {
     res.send('API MAIN Rempah is working!');
