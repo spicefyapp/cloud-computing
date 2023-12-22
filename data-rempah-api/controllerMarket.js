@@ -1,5 +1,6 @@
 import { validationResult, matchedData } from "express-validator";
 import DB from "./dbConnection.js";
+import { uploadToGCP } from '../csConnection.js';
 
 const validation_result = validationResult.withDefaults({
     formatter: (error) => error.msg,
@@ -19,10 +20,8 @@ class Controller {
     };
 
     static add = async (req, res, next) => {
-        const { name, price, noWA, description, image, lat, lan} = matchedData(req);
-        const ximage = image !== null ? image : 'https://storage.googleapis.com/gambar-rempah-spicefy/deff.jpg';
-        const xdescription = description !== null ? description : '-';
-        
+        const { name, price, noWA, description, lat, lan} = matchedData(req);
+        const image = await uploadToGCP(req.file);        
         if (!name || !price || !noWA || !description || !image || !lat || !lan) {
             return res.status(422).json({
                 ok: 0,
@@ -34,7 +33,7 @@ class Controller {
         try {
             const [result] = await DB.execute(
                 "INSERT INTO market (`name`, `price`, `noWA`, `description`,`image` ,`lat` ,`lan`) VALUES (?,?,?,?,?,?,?)",
-                [name, price, noWA, xdescription, ximage, lat, lan]
+                [name, price, noWA, description, image, lat, lan]
             );
             res.status(201).json({
                 ok: 1,
