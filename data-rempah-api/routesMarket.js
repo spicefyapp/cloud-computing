@@ -12,7 +12,7 @@ routes.post(
         body("price", "Must not be empty.").trim().not().isEmpty().escape(),
         body("noWA", "Must not be empty.").trim().not().isEmpty(),
         body("description", "Must not be empty.").notEmpty(),
-        body("image", "Must be URL.").trim().not().isEmpty().isURL(),
+        body("image", "Must be URL."),
         body("lat", "Must not be empty.").trim().not().isEmpty(),
         body("lan", "Must not be empty.").trim().not().isEmpty(),
     ],
