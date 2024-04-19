@@ -1,0 +1,16 @@
+dispatch:
+  # Service data-rempah to /rempah
+  - url: "spicefy.et.r.appspot.com/rempah/*"
+    service: data-rempah
+  - url: "*/rempah/*"
+    service: data-rempah
+
+  # Service data-rempah to /market
+  - url: "spicefy.et.r.appspot.com/market/*"
+    service: data-rempah
+  - url: "*/market/*"
+    service: data-rempah
+
+  # Default
+  #- url: "*/*"
+  #  service: default

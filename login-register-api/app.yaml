@@ -1,0 +1,13 @@
+runtime: nodejs16
+service: default
+env_variables:
+  ACCESS_TOKEN_SECRET: "TOKEN"
+  ACCESS_TOKEN_EXPIRY: 1200 # In seconds (1200 = 20 minutes)
+  REF_TOKEN_SECRET: "TOKEN"
+  REF_TOKEN_EXPIRY: 86400 # In seconds (86400 = 24 hr | 1 Day)
+
+  INS_NAME: "INSTANCE"
+  DB_HOST: "HOST"
+  DB_NAME: "DATABASE" # Replace with your DB name
+  DB_USER: "USER" # Replace with your DB user
+  DB_PASSWORD: "PASSWORD" #add your DB password here
